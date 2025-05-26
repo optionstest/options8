@@ -18,6 +18,18 @@ def get_weekly_expirations(n=10):
 # Page configuration
 st.set_page_config(layout="wide", page_title="Options Analyzer")
 
+# Add disclaimer at the top of the app
+with st.expander("📌 Disclaimer", expanded=True):
+    st.markdown("""
+    **This tool does not provide financial advice.**
+
+    It is not intended to offer personalized investment recommendations, predict market movements, or suggest specific actions like buying or selling securities. 
+
+    The data and insights presented are based on public sources (e.g., Yahoo Finance) and are provided for **educational and analytical purposes only**.
+
+    Always conduct your own research or consult with a licensed financial advisor before making investment decisions.
+    """)
+
 st.title("📊 Options Analyzer for Cash Secured Puts & Covered Calls")
 
 tab1, tab2 = st.tabs(["💰 Cash Secured Put", "📈 Covered Call"])
